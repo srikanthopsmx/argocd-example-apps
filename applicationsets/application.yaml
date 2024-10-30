@@ -6,18 +6,18 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: 'https://github.com/NaveenBalagouni/argocd-training.git'
+        repoURL: 'https://github.com/srikanthopsmx/argocd-example-apps.git'
         revision: HEAD
         directories:
-          - path: two-git
-          - path: sources-git
+          - path: firstapplicationset
+          - path: secondappset
   template:
     metadata:
       name: '{{path.basename}}'
     spec:
       project: default
       source:
-        repoURL: 'https://github.com/NaveenBalagouni/argocd-training.git'
+        repoURL: 'https://github.com/srikanthopsmx/argocd-example-apps.git'
         targetRevision: HEAD
         path: '{{path}}'
       destination:
